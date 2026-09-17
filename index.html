@@ -1,26 +1,51 @@
 <!doctype html>
-<html lang="en">
+<html lang="fa" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
 
+    <title>باغ تازه | میوه فروشی</title>
+
+    <!-- Vazir Font -->
     <link
       href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css"
       rel="stylesheet"
     />
+
+    <!-- Bootstrap RTL -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.rtl.min.css"
     />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <!-- header -->
+
+    <!-- ================= NAVBAR ================= -->
+
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top " id="header">
+      <nav
+        class="navbar navbar-expand-lg navbar-light fixed-top"
+        id="header"
+      >
         <div class="container">
-          <a class="navbar-brand" href="#">هتل آریانا</a>
+
+          <!-- Logo -->
+          <a class="navbar-brand text-light" href="#">
+            <i class="bi bi-leaf-fill"></i>
+            باغ تازه
+          </a>
+
+          <!-- Collapse Button -->
           <button
             class="navbar-toggler"
             type="button"
@@ -32,56 +57,472 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+          <!-- Menu -->
+          <div
+            class="collapse navbar-collapse"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">صحفه اصلی</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">درباره ما</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  خدمات
+                <a class="nav-link text-light active" href="#">
+                  خانه
                 </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">رزور</a></li>
-                  <li><a class="dropdown-item" href="#">اتاق ها</a></li> 
-                  <li><hr class="dropdown-divider" /></li>
-                  <li>
-                    <a class="dropdown-item" href="#">گالری</a>
-                  </li>
-                </ul>
               </li>
+
               <li class="nav-item">
-                <a class="nav-link ">تماس با ما</a>
+                <a class="nav-link text-light" href="#products">
+                  محصولات
+                </a>
               </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#about">
+                  درباره ما
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#contact">
+                  تماس با ما
+                </a>
+              </li>
+
             </ul>
+
+            <!-- Navbar Button -->
+            <a href="#products" class="nav-btn">
+              خرید آنلاین
+              <i class="bi bi-basket3"></i>
+            </a>
+
           </div>
         </div>
       </nav>
     </header>
-    <section style="background: aqua;height: 1500px;">
-      
-    </section>
-    <script>
-  window.addEventListener("scroll", function () {
-    const header = document.getElementById("header");
 
-    if (window.scrollY > 100) {
-      header.classList.add("header-scrolled");
-    } else {
-      header.classList.remove("header-scrolled");
-    }
-  });
-</script>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="intro">
+
+      <!-- Background Video -->
+      <video autoplay muted loop playsinline>
+        <source src="video/back1.mp4" type="video/mp4" />
+      </video>
+
+      <!-- Dark Overlay -->
+      <div class="intro-overlay"></div>
+
+      <!-- Hero Content -->
+      <div class="container">
+        <div class="intro-content">
+
+          <span class="small-title">
+            <i class="bi bi-stars"></i>
+            تازه، طبیعی، خوش‌طعم
+          </span>
+
+          <h1>
+            طعم تازه‌ی
+            <br />
+            <strong>طبیعت</strong>
+            در هر لحظه
+          </h1>
+
+          <p>
+            تازه‌ترین میوه‌ها را با بهترین کیفیت،
+            مستقیم از باغ تا سفره‌ی شما می‌رسانیم.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a href="#products" class="btn-fruit">
+              مشاهده محصولات
+              <i class="bi bi-arrow-left"></i>
+            </a>
+
+            <a href="#about" class="btn-outline-fruit">
+              بیشتر بدانید
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Scroll -->
+      <div class="scroll-down">
+        <span>اسکرول کنید</span>
+        <i class="bi bi-arrow-down"></i>
+      </div>
+
+    </section>
+
+
+    <!-- ================= PRODUCTS ================= -->
+
+    <section class="products-section" id="products">
+
+      <div class="container">
+
+        <div class="section-title">
+          <span>محصولات ما</span>
+          <h2>تازه‌ترین انتخاب‌ها</h2>
+          <p>
+            میوه‌های تازه و باکیفیت برای یک زندگی سالم‌تر
+          </p>
+        </div>
+
+
+        <div class="row g-4">
+
+          <!-- Apple -->
+          <div class="col-md-6 col-lg-4">
+            <div class="fruit-card">
+
+              <div class="fruit-icon">
+                🍎
+              </div>
+
+              <div>
+                <h3>سیب تازه</h3>
+                <p>
+                  شیرین، تازه و سرشار از ویتامین
+                </p>
+              </div>
+
+              <div class="card-bottom">
+                <strong>۱۵۰ افغانی</strong>
+                <button>
+                  <i class="bi bi-plus"></i>
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- Orange -->
+          <div class="col-md-6 col-lg-4">
+            <div class="fruit-card">
+
+              <div class="fruit-icon">
+                🍊
+              </div>
+
+              <div>
+                <h3>پرتقال تازه</h3>
+                <p>
+                  آبدار، خوش‌عطر و سرشار از ویتامین C
+                </p>
+              </div>
+
+              <div class="card-bottom">
+                <strong>۱۸۰ افغانی</strong>
+                <button>
+                  <i class="bi bi-plus"></i>
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- Strawberry -->
+          <div class="col-md-6 col-lg-4">
+            <div class="fruit-card">
+
+              <div class="fruit-icon">
+                🍓
+              </div>
+
+              <div>
+                <h3>توت‌فرنگی</h3>
+                <p>
+                  تازه، شیرین و مناسب دسر
+                </p>
+              </div>
+
+              <div class="card-bottom">
+                <strong>۲۵۰ افغانی</strong>
+                <button>
+                  <i class="bi bi-plus"></i>
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about-section" id="about">
+
+      <div class="container">
+
+        <div class="about-box">
+
+          <div class="about-content">
+
+            <span>درباره باغ تازه</span>
+
+            <h2>
+              از باغ‌های تازه
+              <br />
+              تا خانه‌ی شما
+            </h2>
+
+            <p>
+              ما تلاش می‌کنیم بهترین و تازه‌ترین میوه‌ها را
+              انتخاب کنیم و با کیفیت بالا به دست شما برسانیم.
+              سلامت و رضایت شما همیشه اولویت ماست.
+            </p>
+
+            <a href="#contact" class="btn-fruit">
+              ارتباط با ما
+              <i class="bi bi-arrow-left"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact-section" id="contact">
+
+      <div class="container text-center">
+
+        <span>با ما در ارتباط باشید</span>
+
+        <h2>
+          طراوت را به خانه‌تان بیاورید 🍃
+        </h2>
+
+        <a href="#" class="contact-btn">
+          سفارش دهید
+          <i class="bi bi-arrow-left"></i>
+        </a>
+
+      </div>
+
+    </section>
+    <section class="order-section" id="contact">
+  <div class="container">
+
+    <div class="order-wrapper">
+
+      <div class="order-info">
+        <span>سفارش آنلاین</span>
+
+        <h2>
+          تازگی را
+          <br>
+          <strong>سفارش دهید.</strong>
+        </h2>
+
+        <p>
+          فرم را تکمیل کنید تا سفارش شما با دقت آماده
+          و در کوتاه‌ترین زمان به دستتان برسد.
+        </p>
+
+        <div class="info-item">
+          <i class="bi bi-check-circle-fill"></i>
+          <span>میوه‌های تازه و باکیفیت</span>
+        </div>
+
+        <div class="info-item">
+          <i class="bi bi-check-circle-fill"></i>
+          <span>بسته‌بندی کاملاً بهداشتی</span>
+        </div>
+
+        <div class="info-item">
+          <i class="bi bi-check-circle-fill"></i>
+          <span>تحویل سریع سفارش</span>
+        </div>
+      </div>
+
+
+      <div class="order-form">
+
+        <div class="form-title">
+          <h3>فرم سفارش</h3>
+          <p>اطلاعات خود را وارد کنید</p>
+        </div>
+
+        <form>
+
+          <div class="form-row">
+
+            <div class="input-group-custom">
+              <label>نام شما</label>
+
+              <div class="input-box">
+                <i class="bi bi-person"></i>
+                <input
+                  type="text"
+                  placeholder="نام خود را وارد کنید"
+                >
+              </div>
+            </div>
+
+            <div class="input-group-custom">
+              <label>شماره تماس</label>
+
+              <div class="input-box">
+                <i class="bi bi-telephone"></i>
+                <input
+                  type="tel"
+                  placeholder="07XX XXX XXX"
+                >
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="input-group-custom">
+            <label>انتخاب محصول</label>
+
+            <div class="input-box">
+              <i class="bi bi-basket"></i>
+
+              <select>
+                <option>محصول مورد نظر را انتخاب کنید</option>
+                <option>سیب تازه</option>
+                <option>پرتقال تازه</option>
+                <option>توت‌فرنگی</option>
+                <option>مجموعه میوه‌ها</option>
+              </select>
+            </div>
+          </div>
+
+
+          <div class="input-group-custom">
+            <label>آدرس تحویل</label>
+
+            <div class="input-box textarea-box">
+              <i class="bi bi-geo-alt"></i>
+
+              <textarea
+                rows="3"
+                placeholder="آدرس کامل خود را وارد کنید"
+              ></textarea>
+            </div>
+          </div>
+
+
+          <div class="input-group-custom">
+            <label>توضیحات سفارش</label>
+
+            <div class="input-box textarea-box">
+              <i class="bi bi-chat-left-text"></i>
+
+              <textarea
+                rows="3"
+                placeholder="توضیحات اضافی..."
+              ></textarea>
+            </div>
+          </div>
+
+
+          <button type="submit" class="submit-btn">
+            ثبت سفارش
+
+            <i class="bi bi-arrow-left"></i>
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+      <div class="container">
+
+        <div class="footer-content">
+
+          <div>
+            <h3>
+              <i class="bi bi-leaf-fill"></i>
+              باغ تازه
+            </h3>
+
+            <p>
+              طعم واقعی تازگی.
+            </p>
+          </div>
+
+          <div class="social-icons">
+
+            <a href="#">
+              <i class="bi bi-instagram"></i>
+            </a>
+
+            <a href="#">
+              <i class="bi bi-facebook"></i>
+            </a>
+
+            <a href="#">
+              <i class="bi bi-telegram"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+        <hr />
+
+        <p class="copyright">
+          © 2026 باغ تازه | تمامی حقوق محفوظ است.
+        </p>
+
+      </div>
+
+    </footer>
+
+
+    <!-- ================= SCROLL SCRIPT ================= -->
+
+    <script>
+      window.addEventListener("scroll", function () {
+
+        const header = document.getElementById("header");
+
+        if (window.scrollY > 100) {
+          header.classList.add("header-scrolled");
+        } else {
+          header.classList.remove("header-scrolled");
+        }
+
+      });
+    </script>
+
+
+    <!-- Bootstrap JS -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
   </body>
 </html>
