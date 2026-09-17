@@ -841,3 +841,187 @@ footer hr {
   }
 
 }
+/* ================= SCROLL ANIMATION ================= */
+
+.products-section,
+.about-section,
+.order-section,
+.contact-section,
+footer {
+  opacity: 0;
+  transform: translateY(100px);
+  transition:
+    opacity 1s ease,
+    transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.products-section.show,
+.about-section.show,
+.order-section.show,
+.contact-section.show,
+footer.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* عنوان محصولات */
+
+.section-title {
+  opacity: 0;
+  transform: translateY(70px);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.products-section.show .section-title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* کارت‌های میوه */
+
+.fruit-card {
+  opacity: 0;
+  transform: translateY(80px) scale(0.95);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.products-section.show .fruit-card {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+
+/* کارت اول */
+
+.products-section.show .col-lg-4:nth-child(1) .fruit-card {
+  transition-delay: 0.1s;
+}
+
+
+/* کارت دوم */
+
+.products-section.show .col-lg-4:nth-child(2) .fruit-card {
+  transition-delay: 0.25s;
+}
+
+
+/* کارت سوم */
+
+.products-section.show .col-lg-4:nth-child(3) .fruit-card {
+  transition-delay: 0.4s;
+}
+
+
+/* بخش About */
+
+.about-box {
+  opacity: 0;
+  transform: translateY(100px);
+  transition:
+    opacity 1s ease,
+    transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.about-section.show .about-box {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* متن About */
+
+.about-content {
+  opacity: 0;
+  transform: translateY(50px);
+  transition:
+    opacity 0.9s ease 0.25s,
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.25s;
+}
+
+.about-section.show .about-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* فرم */
+
+.order-info {
+  opacity: 0;
+  transform: translateY(80px);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.order-form {
+  opacity: 0;
+  transform: translateY(100px) scale(0.97);
+  transition:
+    opacity 0.9s ease 0.2s,
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.2s;
+}
+
+.order-section.show .order-info,
+.order-section.show .order-form {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+
+/* Contact */
+
+.contact-section h2,
+.contact-section > .container > span,
+.contact-btn {
+  opacity: 0;
+  transform: translateY(50px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.contact-section h2 {
+  transition-delay: 0.15s;
+}
+
+.contact-btn {
+  transition-delay: 0.3s;
+}
+
+.contact-section.show h2,
+.contact-section.show > .container > span,
+.contact-section.show .contact-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* کاهش حرکت برای کسانی که در سیستم فعال کرده‌اند */
+
+@media (prefers-reduced-motion: reduce) {
+  .products-section,
+  .about-section,
+  .order-section,
+  .contact-section,
+  footer,
+  .section-title,
+  .fruit-card,
+  .about-box,
+  .about-content,
+  .order-info,
+  .order-form,
+  .contact-section h2,
+  .contact-section > .container > span,
+  .contact-btn {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

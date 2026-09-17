@@ -523,6 +523,44 @@
     <!-- Bootstrap JS -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    
+<script>
+  window.addEventListener("scroll", function () {
+    const header = document.getElementById("header");
 
+    if (window.scrollY > 100) {
+      header.classList.add("header-scrolled");
+    } else {
+      header.classList.remove("header-scrolled");
+    }
+  });
+
+
+  /* ================= SECTION ANIMATION ================= */
+
+  const sections = document.querySelectorAll(
+    ".products-section, .about-section, .order-section, .contact-section, footer"
+  );
+
+  const observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+
+      });
+    },
+    {
+      threshold: 0.15
+    }
+  );
+
+
+  sections.forEach(function (section) {
+    observer.observe(section);
+  });
+</script>
   </body>
 </html>
