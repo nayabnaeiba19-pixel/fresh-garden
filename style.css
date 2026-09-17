@@ -1,2 +1,16 @@
-body{font-family: Vazir, sans-serif;
-direction: rtl;}
+body {
+  font-family: Vazir, sans-serif;
+  direction: rtl;
+}
+/* header */
+
+#header {
+  transition:all 0.4s;
+  padding: 20px 0;
+}
+
+.header-scrolled {
+  background: #fff;
+  box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
+}
+/* intro */
